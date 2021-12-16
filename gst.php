@@ -4,7 +4,7 @@
 <title>TABLE CREATION</title>
 </head>
 <body style = "background-color:powderblue;text-align:center;">
-<h1> CREATING TABLE IN MYSQL </h1>
+<h1> CALCULATING PAYMENT INCLUDING GST </h1>
 <form action="" method="POST"  >
 <h3>User : <input type="text" name="name" style="height:25px; width:160px"></h3>
 <h3>Amount : <input type="text" name="amt" style="height:25px; width:160px"></h3>
@@ -14,7 +14,7 @@
 </html>
 
 <?php
-$user=$_POST['name'];
+
 $conn=mysqli_connect('localhost','root','');
 if(!$conn)
 {	
@@ -25,6 +25,8 @@ $conn->query($sql);
 $n=mysqli_connect('localhost','root','','intern');
 if(isset($_POST['name']))
 {
+	
+	$user=$_POST['name'];
 	$amt = $_POST['amt'];
 	if($amt<=999)
 	{
